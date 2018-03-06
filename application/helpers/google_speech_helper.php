@@ -13,7 +13,6 @@ use Google\Cloud\Core\ExponentialBackoff;
  * transcribe_async_gcs('your-bucket-name', 'audiofile.wav');
  * ```.
  *
- * @param string $bucketName The Cloud Storage bucket name.
  * @param string $objectName The Cloud Storage object name.
  * @param string $languageCode The Cloud Storage
  *     be recognized. Accepts BCP-47 (e.g., `"en-US"`, `"es-ES"`).
@@ -26,7 +25,6 @@ function transcribe_async_gcs($objectName, $languageCode = 'it-IT', $options = [
     $CI = & get_instance();
     $CI->config->load('google_cloud');
 
-    $projectId   = $CI->config->item('project_id');
     $bucketName  = $CI->config->item('audio_bucket_name');
     $keyFilePath = $CI->config->item('key_file_path');
 
@@ -62,12 +60,10 @@ function transcribe_async_gcs($objectName, $languageCode = 'it-IT', $options = [
         $return  = $results[0]->alternatives()[0];
     }
 
-
     echo '<pre>';
     print_r($return);
     echo '</pre>';
-    //$return = substr($return, 0, 1 ) .  preg_replace('/[A-Z]/', '. $0',substr($return, 1 ));
-
+    $return = substr($return, 0, 1 ) .  preg_replace('/[A-Z]/', '. $0',substr($return, 1 ));
 
     return json_encode($return);
 }
@@ -80,7 +76,6 @@ function transcribe_async_gcs($objectName, $languageCode = 'it-IT', $options = [
  * transcribe_sync_gcs('your-bucket-name', 'audiofile.wav');
  * ```.
  *
- * @param string $audioFile path to an audio file.
  * @param string $languageCode The language of the content to
  *     be recognized. Accepts BCP-47 (e.g., `"en-US"`, `"es-ES"`).
  * @param array $options configuration options.
@@ -92,7 +87,6 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
     $CI = & get_instance();
     $CI->config->load('google_cloud');
 
-    $projectId   = $CI->config->item('project_id');
     $bucketName  = $CI->config->item('audio_bucket_name');
     $keyFilePath = $CI->config->item('key_file_path');
 

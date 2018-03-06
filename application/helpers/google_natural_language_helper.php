@@ -102,4 +102,5 @@ function getStrictType($score, $magnitude){
         return 'neutral';
     if( $score >= -0.25 && $score <= 0.25 && $magnitude > 0 )
         return 'mixed';
+    return 'unknown';
 }

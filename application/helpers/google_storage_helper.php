@@ -8,6 +8,11 @@ use Google\Cloud\Storage\StorageClient;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @param bool $file_path the path for find the file
+ * @param bool $file_name the name of the file
+ * @return bool the result of the function
+ */
 function upload_file($file_path = false, $file_name = false)
 {
 	$result = false;
@@ -16,7 +21,6 @@ function upload_file($file_path = false, $file_name = false)
 		$CI = & get_instance();
 	    $CI->config->load('google_cloud');
 
-		$projectId   = $CI->config->item('project_id');
 		$bucketName  = $CI->config->item('audio_bucket_name');
 		$keyFilePath = $CI->config->item('key_file_path');
 

@@ -86,11 +86,11 @@ function visualize(stream) {
 function updateTimer(){
 	seconds++;
 
-	if(seconds == 60){
+	if(seconds === 60){
 		minutes++;
 		seconds = 0;
 
-		if(minutes == 60){
+		if(minutes === 60){
 			hours++;
 			minutes = 0;
 		}
