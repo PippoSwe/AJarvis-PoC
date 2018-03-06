@@ -177,7 +177,8 @@ function caricamentoCompletato(event)
 	console.log('caricamento completato');
 
 	$('.loader-container').addClass('d-none');
-	window.open('https://35.198.80.139/prototipo/analyzer', '_blank');
+	var url = "https://35.198.80.139/prototipo/analyzer";
+	$("<a>").attr("href", url).attr("target", "_blank")[0].click();
 }
 
 function erroreCaricamento(event)
