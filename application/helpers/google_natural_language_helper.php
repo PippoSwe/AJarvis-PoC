@@ -25,6 +25,8 @@ function analyzeText($string, $config = null)
     if ($config === null)
         $config = loadDefaultConfig('it');
 
+    $string = preg_replace('/[A-Z]/', '. $0',substr($string, 1 ));
+
     return json_encode($language->annotateText($string, $config)->info());
 }
 

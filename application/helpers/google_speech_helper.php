@@ -108,8 +108,6 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
         $options
     );
 
-    $results = preg_replace('/[A-Z]/', '. $0',substr($results, 1 ));
-
     $return = array('transcript' => '');
 
 echo '<pre>';
