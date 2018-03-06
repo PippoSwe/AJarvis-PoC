@@ -13,9 +13,6 @@ class Analyzer extends CI_Controller
     {
         $text   = file_get_contents(getcwd() . '/text/input.txt');
         $text   = utf8_decode($text);
-
-echo analyzeText($text); die();
-
         $report = json_decode(analyzeText($text), TRUE);
 
         $content_data = array(
@@ -23,15 +20,16 @@ echo analyzeText($text); die();
             'sentences_positive' => get_sentences($report, 'positive'),
             'sentences_neutral'  => get_sentences($report, 'neutral'),
             'sentences_negative' => get_sentences($report, 'negative'),
-            'barChart'           => $this->createTypeBarChart($report, 'barChart'),
-            'pieChart'           => $this->createTypeBarChart($report, 'pieChart'),
-            'strictBarChart'     => $this->createTypeBarChart($report, 'strictPieChart', true),
+            'barChart'           => $this->createTypeChart($report, 'barChart'),
+            'pieChart'           => $this->createTypeChart($report, 'pieChart'),
+            'strictBarChart'     => $this->createTypeChart($report, 'strictBarChart', true),
+            'strictPieChart'     => $this->createTypeChart($report, 'strictPieChart', true),
             'speechThreshold'    => $this->createSpeechGoing($report, 'speechThreshold')
         );
 
         $data['content']      = $this->load->view('analyzer/main', $content_data, TRUE);
         $data['theme_js_top'] = array('chartist/chartist.min.js','chartist/chartist-plugin-threshold.min.js');
-        $data['theme_css']    = array('chartist/chartist.min.css');
+        $data['theme_css']    = array('report.css','chartist/chartist.min.css','chartist/fixChart.css');
 
         $this->load->view('template', $data);
     }
@@ -42,7 +40,7 @@ echo analyzeText($text); die();
      * @param bool $useStrict if true it will give a more accurate analyze. Default false.
      * @return array create an array for thresholdChart view
      */
-    function createTypeBarChart($report, $class, $useStrict = false)
+    function createTypeChart($report, $class, $useStrict = false)
     {
         if ($useStrict) {
             $series = array(0, 0, 0, 0, 0, 0);

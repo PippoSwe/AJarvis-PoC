@@ -1,0 +1,10 @@
+.container-fluid {
+	padding: 0;
+}
+
+.report-container {
+	background: #1d2836;
+	color: white;
+	padding-right: 15px;
+	padding-left: 15px;
+}
