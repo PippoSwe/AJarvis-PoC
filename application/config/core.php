@@ -5,4 +5,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Core Config File
  */
 
-$config['site_version'] = "0.1.4";
+$config['site_version'] = "0.5.0";
