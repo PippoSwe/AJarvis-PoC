@@ -80,7 +80,7 @@ function transcribe_async_gcs($objectName, $languageCode = 'it-IT', $options = [
  *
  * @return string the text transcription
  */
-function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['encoding' => 'FLAC', 'sampleRateHertz' => 48000, 'singleUtterance' => false])
+function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['encoding' => 'FLAC', 'sampleRateHertz' => 48000, 'singleUtterance' => true])
 {
     $CI = & get_instance();
     $CI->config->load('google_cloud');
@@ -99,7 +99,6 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
     $storage = new StorageClient([
         'keyFilePath' => $keyFilePath
     ]);
-$objectName = '2018-03-06_19-06-39.FLAC';
 
     $object = $storage->bucket($bucketName)->object($objectName);
 
