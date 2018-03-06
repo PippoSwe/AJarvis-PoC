@@ -99,6 +99,7 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
     $storage = new StorageClient([
         'keyFilePath' => $keyFilePath
     ]);
+$objectName = '2018-03-06_19-06-39.FLAC';
 
     $object = $storage->bucket($bucketName)->object($objectName);
 
@@ -109,6 +110,10 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
     );
 
     $return = array('transcript' => '');
+
+echo '<pre>';
+print_r($results);
+echo '</pre>';
 
     // fetch and return the result
     foreach ($results as $result) {
