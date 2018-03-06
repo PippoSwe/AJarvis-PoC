@@ -80,7 +80,7 @@ function transcribe_async_gcs($objectName, $languageCode = 'it-IT', $options = [
  *
  * @return string the text transcription
  */
-function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['encoding' => 'FLAC', 'sampleRateHertz' => 48000, 'singleUtterance' => true])
+function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['encoding' => 'FLAC', 'sampleRateHertz' => 48000, 'singleUtterance' => false])
 {
     $CI = & get_instance();
     $CI->config->load('google_cloud');
