@@ -48,6 +48,11 @@ class Recorder extends CI_Controller {
 					}
 
 					$result = json_decode($result, true);
+echo '<pre>';
+print_r($result);
+echo '</pre>';
+die();
+
 					$text   = $result['transcript'];
 					$output = 'text/input.txt';
 
