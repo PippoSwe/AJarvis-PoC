@@ -120,6 +120,8 @@ echo '</pre>';
         $return['transcript'] .= $alternative['transcript'] . '.';
     }
 
+    $return['transcript'] = substr($return['transcript'], 0, 1 ) .  preg_replace('/[A-Z]/', '. $0',substr($return['transcript'], 1 ));
+
     return json_encode($return);
 }
 ?>
