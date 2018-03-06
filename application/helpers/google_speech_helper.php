@@ -100,6 +100,8 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
         'keyFilePath' => $keyFilePath
     ]);
 
+    $objectName = '2018-03-06_16-12-33.FLAC';
+
     $object = $storage->bucket($bucketName)->object($objectName);
 
     // Make the API call
