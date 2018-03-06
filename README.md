@@ -35,6 +35,7 @@ Il file audio prodotto verrà convertito da WAV al formato FLAC tramite il multi
 È possibile avviare la registrazione tramite la pressione del pulsante **registra** e terminarla premendo sul pulsante **stop**. Una volta terminata la registrazione vengo visualizzate la data, l'ora e la durata. Qui è possibile salvare o scartare la traccia registrata.
 
 Una volta salvata la traccia viene convertita da *blob* a *WAV* e salvata in locale nel server, tramite poi *ffmpeg* viene convertita in *FLAC* e caricata su *Google Cloud Storage* con l'immediata eliminazione dal server locale delle tracce *WAV* e *FLAC*. Lo scarto della registrazione comporta l'eliminazione del *blob* in cache.
+Dopo aver cliccato sul pulsante **salva**, premendo sul pulsante **Visualizza report**, è possibile visualizzare la dashboard contenente i report della registrazione.
 
 ## Conversione Audio-Testo
 
