@@ -109,6 +109,8 @@ $objectName = '2018-03-06_19-06-39.FLAC';
         $options
     );
 
+    $results = preg_replace('/[A-Z]/', '. $0',substr($results, 1 ));
+
     $return = array('transcript' => '');
 
 echo '<pre>';
