@@ -4,7 +4,7 @@
 	<div class="col-sm-12 col-lg-6 recorder-container">
 		<button class="record btn btn-primary"><i class="ion-android-microphone mr-1"></i> registra</button>
 		<button class="stop btn btn-outline-danger"><i class="ion-stop mr-1"></i> stop</button>
-		<a class="btn btn-outline-success d-none float-right" id="visualizeReport" href="<?php echo site_url('analyzer'); ?>" target="_blank">
+		<a class="btn btn-outline-success d-none" id="visualizeReport" href="<?php echo site_url('analyzer'); ?>" target="_blank">
 			<i class="ion-ios-analytics-outline mr-1"></i>visualizza report
 		</a>
 		<div id="timer"></div>
