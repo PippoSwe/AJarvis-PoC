@@ -115,5 +115,4 @@ class Analyzer extends CI_Controller
             'class' => $class
         );
     }
-
 }
