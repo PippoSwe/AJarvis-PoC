@@ -111,14 +111,11 @@ function transcribe_sync_gcs($objectName, $languageCode = 'it-IT', $options = ['
     );
 
     $return = array('transcript' => '');
-echo '<pre>';
-print_r($results);
-echo '</pre>';
-die();
+
     // fetch and return the result
     foreach ($results as $result) {
         $alternative = $result->alternatives()[0];
-        $return['transcript'] .= $alternative['transcript'];
+        $return['transcript'] .= $alternative['transcript'] . '.';
     }
 
     return json_encode($return);
