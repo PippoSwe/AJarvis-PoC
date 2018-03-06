@@ -63,7 +63,7 @@ function transcribe_async_gcs($objectName, $languageCode = 'it-IT', $options = [
     echo '<pre>';
     print_r($return);
     echo '</pre>';
-    $return = substr($return, 0, 1 ) .  preg_replace('/[A-Z]/', '. $0',substr($return, 1 ));
+    $return['transcript'] = substr($return['transcript'], 0, 1 ) .  preg_replace('/[A-Z]/', '. $0',substr($return['transcript'], 1 ));
 
     return json_encode($return);
 }
