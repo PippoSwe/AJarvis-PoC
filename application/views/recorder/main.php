@@ -10,7 +10,7 @@
 		<div id="timer"></div>
 	</div>
 </div>
-<div class="loader-container">
+<div class="loader-container d-none">
 	<div class="row justify-content-center mt-3 text-center">
 		<div class="col-sm-12 col-lg-6">
 			<div class="loader-text">Sto elaborando il file.. attendere</div>
