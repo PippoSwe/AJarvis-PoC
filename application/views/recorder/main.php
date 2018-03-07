@@ -10,12 +10,16 @@
 		<div id="timer"></div>
 	</div>
 </div>
-<div class="loader-container d-none">
+<div class="loader-container">
 	<div class="row justify-content-center mt-3 text-center">
 		<div class="col-sm-12 col-lg-6">
-			Sto elaborando il file.. attendere
+			<div class="loader-text">Sto elaborando il file.. attendere</div>
 			<div class="loader">
-				<div></div><div></div><div></div>
+				<div class="rect1"></div>
+				<div class="rect2"></div>
+				<div class="rect3"></div>
+				<div class="rect4"></div>
+				<div class="rect5"></div>
 			</div>
 		</div>
 	</div>

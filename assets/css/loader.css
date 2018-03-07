@@ -1,39 +1,64 @@
-.loader-container {
-    font-size: 1.4em;
-    line-height: 2.8em;
+.loader-text {
+    float: right;
+    font-size: 1.5em;
 }
 
-.loader div {
+.loader {
+    float: left;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.loader > div {
+    background-color: white;
+    height: 100%;
+    width: 6px;
     display: inline-block;
-    position: absolute;
-    left: 6px;
-    width: 13px;
-    background: white;
-    animation: loader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
 
-.loader div:nth-child(1) {
-    left: 6px;
-    animation-delay: -0.24s;
+.loader .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
 }
 
-.loader div:nth-child(2) {
-    left: 26px;
-    animation-delay: -0.12s;
+.loader .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
 }
 
-.loader div:nth-child(3) {
-    left: 45px;
-    animation-delay: 0;
+.loader .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
 }
 
-@keyframes loader {
-    0% {
-        top: 6px;
-        height: 51px;
+.loader .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+    }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
     }
-    50%, 100% {
-        top: 19px;
-        height: 26px;
+}
+
+/* SMARTPHONE */
+@media screen and (max-width: 500px) {
+    .loader-text {
+        font-size: 1em;
+        margin-top: .5em;
     }
 }

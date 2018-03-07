@@ -24,6 +24,8 @@ hr {
 	padding: 1em;
 	border: 1px solid white;
 	border-radius: .5em;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 /* FIX BOOTSTRAP */
