@@ -7,4 +7,4 @@
 
 echo '<div class="'. $class .'" align="center"></div>';
 
-echo '<script>new Chartist.Pie(\'.'. $class .'\', {series: [' .$series .']}, {showLabel: false,donut: true,donutWidth: 60,donutSolid: true,startAngle: 270,total: 12,height: 300});</script>';
+echo '<script>new Chartist.Pie(\'.'. $class .'\', {series: [' .$series .']}, {showLabel: true,donut: true,donutWidth: 60,donutSolid: true,startAngle: 270,total: 12,height: 300});</script>';

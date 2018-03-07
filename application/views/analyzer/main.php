@@ -7,6 +7,7 @@
 			<?php echo $plain_text; ?>
 		</div>
 	</div>
+	<hr />
 	<div class="mt-3"></div>
 	<div class="row">
 		<?php if(count($sentences_positive['sentences']) > 0) : ?>
