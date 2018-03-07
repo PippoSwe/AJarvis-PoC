@@ -8,3 +8,19 @@
 	padding-right: 15px;
 	padding-left: 15px;
 }
+
+.text-positive, .text-neutral, .text-negative {
+	padding: .15em;
+}
+
+.text-positive {
+	background: #28a745;
+}
+
+.text-neutral {
+	background: #dc3545;
+}
+
+.text-negative {
+	background: #17a2b8;
+}
