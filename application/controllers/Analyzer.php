@@ -16,7 +16,7 @@ class Analyzer extends CI_Controller
         $report = json_decode(analyzeText($text), TRUE);
 
         $content_data = array(
-            'plain_text'         => $text,
+            'plain_text'         => get_plain_text($report),
             'sentences_positive' => get_sentences($report, 'positive'),
             'sentences_neutral'  => get_sentences($report, 'neutral'),
             'sentences_negative' => get_sentences($report, 'negative'),

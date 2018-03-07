@@ -45,6 +45,24 @@ function loadDefaultConfig($language)
 
 /**
  * @param array $report result (as array) from analyzeText
+ * @return string with plain-text
+ */
+function get_plain_text($report = array())
+{
+    $text = '';
+
+    if(isset($report['sentences'])){
+        foreach($report['sentences'] as $sentence){
+            $score = $sentence['sentiment']['score'];
+            $text .= '<span class="text-' . getSimpleType($score) . '">' . $sentence['text']['content'] . '</span>';
+        }
+    }
+
+    return $text;
+}
+
+/**
+ * @param array $report result (as array) from analyzeText
  * @param string $type type of sentence (positive,neutral,negative)
  * @return array of sentences (positive or negative) and array of sentimen result
  */
