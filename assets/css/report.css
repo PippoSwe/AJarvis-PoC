@@ -11,6 +11,7 @@
 
 .text-positive, .text-neutral, .text-negative {
 	padding: .15em;
+	font-size: 1.3em;
 }
 
 .text-positive {
