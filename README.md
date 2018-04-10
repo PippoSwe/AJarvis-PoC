@@ -1,6 +1,8 @@
 # Prototipo Ajarvis
 
-Questo prototipo serve a dimostrare la fattibilità del progetto Ajarvis, il programma funzionante é reperibile al seguente [link](https://35.198.80.139/prototipo/).
+[![Build Status](https://travis-ci.org/PippoSwe/AJarvis-PoC.svg?branch=master)](https://travis-ci.org/PippoSwe/AJarvis-PoC) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a16271c01b614f9a8585e0ebd3948f3b)](https://www.codacy.com/app/Giglium/SWE_prototipo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ceradini/SWE_prototipo&amp;utm_campaign=Badge_Grade)
+
+Questo prototipo serve a dimostrare la fattibilità del progetto Ajarvis.
 
 ## Scopo del PoC
 
